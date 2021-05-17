@@ -28,7 +28,7 @@ pipeline {
 						
 								docker.withRegistry('http://172.26.21.156:8085/v2', 'nexus-local'){
 								sh 'docker build -t petclinic:latest .'
-								sh 'docker push petclinic:latest'
+								sh 'docker push http://172.26.21.156:8085/v2/petclinic:latest'
 							}
 						
 							
