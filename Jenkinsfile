@@ -25,12 +25,12 @@ pipeline {
 		stage('Dockerization'){
 				steps{
 					script{
-						docker.withTool('docker'){
-							docker.withRegistry('http://172.26.21.156:8081', 'nexus-local'){
+						
+								docker.withRegistry('http://172.26.21.156:8081', 'nexus-local'){
 								sh 'docker build -t petclinic:latest .'
 								sh 'docker push petclinic:latest'
 							}
-						}
+						
 							
 					}
 				}
