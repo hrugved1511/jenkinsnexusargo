@@ -26,7 +26,7 @@ pipeline {
 				steps{
 					script{
 						
-								docker.withRegistry('http://172.26.21.156:8081', 'nexus-local'){
+								docker.withRegistry('http://172.26.21.156:8085/v2', 'nexus-local'){
 								sh 'docker build -t petclinic:latest .'
 								sh 'docker push petclinic:latest'
 							}
