@@ -32,7 +32,7 @@ pipeline {
 		stage('Dockerization'){
 				steps{
 				 sh 'docker build -t petclinic:latest .'
-				 sh 'docker push petclinic:latest'
+				 sh 'docker push http://172.26.21.156:8081/petclinic:latest'
 				}
 		}
         
