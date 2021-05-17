@@ -24,9 +24,13 @@ pipeline {
 		
 		stage('Dockerization'){
 				steps{
-				 sh 'docker build -t petclinic:latest .'
-				 sh 'docker login -u admin -p P@ssword@123 http://172.26.21.156:8081/'  
-				 sh 'docker push http://172.26.21.156:8081/repository/Test/petclinic:latest'
+				
+				 docker.withTool('docker'){
+					docker.withRegistry('http://172.26.21.156:8081', 'nexus-local'){
+						sh 'docker build -t petclinic:latest .'
+						sh 'docker push petclinic:latest'
+						}
+				}
 				}
 		}
         
