@@ -2,13 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('Fetching the code from SCM ') {
-            steps {
-            git credentialsId: 'ssh-gitlab', url: 'git@gitlab.xpanxion.com:vvarade/xiomate-bom.git'
-            git url: 'https://github.com/rpmulugu/spring-petclinic-1.git'
-            }
-        }
-        
          stage('Building') {
             steps {
                 sh 'mvn clean package'
