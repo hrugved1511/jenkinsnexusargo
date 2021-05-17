@@ -28,6 +28,13 @@ pipeline {
                     }
                }
         }
+		
+		stage('Dockerization'){
+				steps{
+				 sh 'docker build -t petclinic:latest .'
+				 sh 'docker push petclinic:latest'
+				}
+		}
         
     }   
 }
