@@ -20,21 +20,21 @@ build1:
     - ls -ltr
     - java -jar target/*.jar &
 
-test1:
-  stage: test
-  tags:
-    - gitlabrunner2
-  script:
-    - echo "Do a test here"
-    - echo "For example run a test suite"
+# test1:
+#   stage: test
+#   tags:
+#     - gitlabrunner2
+#   script:
+#     - echo "Do a test here"
+#     - echo "For example run a test suite"
 
-test2:
-  stage: test
-  tags:
-    - gitlabrunner2
-  script:
-    - echo "Do another parallel test here"
-    - echo "For example run a lint test"
+# test2:
+#   stage: test
+#   tags:
+#     - gitlabrunner2
+#   script:
+#     - echo "Do another parallel test here"
+#     - echo "For example run a lint test"
 
 # deploy1:
 #   stage: deploy
