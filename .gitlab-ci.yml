@@ -18,7 +18,7 @@ build1:
     - ./mvnw package
     - pwd
     - ls -ltr
-    - nohup java -jar target/*.jar &
+    - nohup java -jar target/*.jar > nohup.out &
 
 # test1:
 #   stage: test
