@@ -13,7 +13,7 @@ build1:
     - GitlabDemo
   script:
     - echo "in build stage .... mvn"
-    - ./mvnw package
+    - sudo ./mvnw package
 
 test1:
   stage: test
@@ -37,4 +37,4 @@ deploy1:
     - GitlabDemo
   script:
     - echo "in deploy stage .... java"
-    - java -jar target/*.jar
+    - sudo java -jar target/*.jar
