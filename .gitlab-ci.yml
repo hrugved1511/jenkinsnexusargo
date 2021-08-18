@@ -13,6 +13,7 @@ build1:
     - gitlabrunner2
   script:
     - echo "in build stage .... mvn"
+    - chmod -R 755 *
     - ./mvnw package
 
 test1:
