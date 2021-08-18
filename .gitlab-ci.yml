@@ -9,22 +9,30 @@ after_script:
 
 build1:
   stage: build
+  tags:
+    - GitlabDemo
   script:
     - ./mvnw package
 
 test1:
   stage: test
+  tags:
+    - GitlabDemo
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"
 
 test2:
   stage: test
+  tags:
+    - GitlabDemo
   script:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
 
 deploy1:
   stage: deploy
+  tags:
+    - GitlabDemo
   script:
     - java -jar target/*.jar
