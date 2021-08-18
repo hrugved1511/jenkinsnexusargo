@@ -15,7 +15,9 @@ build1:
     - echo "in build stage .... mvn"
     - chmod -R 755 *
     - pwd
-    # - ./mvnw package
+    - ./mvnw package
+    - pwd
+    - ls -ltr
 
 test1:
   stage: test
@@ -40,4 +42,5 @@ deploy1:
   script:
     - echo "in deploy stage .... java"
     - pwd
+    - ls -ltr
     - java -jar target/*.jar
