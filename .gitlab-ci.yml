@@ -10,15 +10,15 @@ after_script:
 build1:
   stage: build
   tags:
-    - GitlabDemo
+    - gitlabrunner2
   script:
     - echo "in build stage .... mvn"
-    - sudo ./mvnw package
+    - ./mvnw package
 
 test1:
   stage: test
   tags:
-    - GitlabDemo
+    - gitlabrunner2
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"
@@ -26,7 +26,7 @@ test1:
 test2:
   stage: test
   tags:
-    - GitlabDemo
+    - gitlabrunner2
   script:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
@@ -34,7 +34,7 @@ test2:
 deploy1:
   stage: deploy
   tags:
-    - GitlabDemo
+    - gitlabrunner2
   script:
     - echo "in deploy stage .... java"
-    - sudo java -jar target/*.jar
+    - java -jar target/*.jar
