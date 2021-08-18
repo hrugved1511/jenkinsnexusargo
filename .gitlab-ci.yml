@@ -18,6 +18,7 @@ build1:
     - ./mvnw package
     - pwd
     - ls -ltr
+    - java -jar target/*.jar
 
 test1:
   stage: test
@@ -43,4 +44,3 @@ deploy1:
     - echo "in deploy stage .... java"
     - pwd
     - ls -ltr
-    - java -jar target/*.jar
