@@ -12,6 +12,7 @@ build1:
   tags:
     - GitlabDemo
   script:
+    - echo "in build stage .... mvn"
     - ./mvnw package
 
 test1:
@@ -35,4 +36,5 @@ deploy1:
   tags:
     - GitlabDemo
   script:
+    - echo "in deploy stage .... java"
     - java -jar target/*.jar
